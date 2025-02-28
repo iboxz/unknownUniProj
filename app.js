@@ -64,29 +64,3 @@ app.get("/api/data", (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
-
-/* app.delete("/api/clear", (req, res) => {
-  db.run("DELETE FROM users", [], function (err) {
-    if (err) {
-      return res.status(500).json({
-        success: false,
-        message: "Error deleting data",
-      });
-    }
-    
-    // Reset the AUTOINCREMENT counter
-    db.run("DELETE FROM sqlite_sequence WHERE name='users'", [], function(err) {
-      if (err) {
-        return res.status(500).json({
-          success: false,
-          message: "Error resetting counter",
-        });
-      }
-      
-      return res.status(200).json({
-        success: true,
-        message: "All data deleted and counter reset",
-      });
-    });
-  });
-}); */
