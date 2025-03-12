@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>صفحه ورود ادمین</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+        background-color: #eef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-container {
+        background-color: #fff;
+        padding: 20px 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label,
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      input[type="password"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>ورود ادمین</h2>
+      <form action="/mod/login" method="POST">
+        <label for="admin_password">رمز ادمین:</label>
+        <input type="password" id="admin_password" name="admin_password" required />
+        <input type="submit" value="ورود" />
+      </form>
+    </div>
+  </body>
+</html>
